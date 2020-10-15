@@ -1,0 +1,10 @@
+const express=require('express');
+const router=express.Router();
+const userController=require('./src/controllers/UserController');
+const HomeController=require('./src/controllers/homeController');
+const AdminController=require('./src/controllers/adminController');
+const PageController=require('./src/controllers/pageController');
+router.get('/',HomeController.index);
+router.get('/admin',AdminController.index);
+router.get('/:slug',PageController.index);
+module.exports=router;

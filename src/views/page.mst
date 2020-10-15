@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>{{title}}</title>
+    <style type="text/css">
+    body{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        margin:0;
+        padding:20px;
+        font-family:Helvetica,Arial;
+        background: {{bg}}; 
+        color:{{font_color}};
+
+    }
+    .profile-image img{
+        width:auto;
+        height:100px;
+        
+    }
+    .profile-title{
+        font-size:17px;
+        font-weight:bold;
+        margin-top:10px;
+    }
+    .link-area{
+        width:100%;
+        margin:50px 0;
+
+    }
+    .link-area a{
+        display:block;
+        padding:20px;
+        text-align:center;
+        text-decoration:none;
+        font-size:18px;
+        font-weight:bold;
+        margin-bottom:20px;
+    }
+    .linksquare{
+        border-radius:0;
+    }
+    .linkrounded{
+        border-radius:50px;
+    }
+    .banner{
+
+    }
+    </style>
+</head>
+<body>
+
+     <div class="profile-image">
+        <img src = "/media/upload/{{profile_image}}" alt="imagem do demonio"/>
+    </div>
+    <div class="profile-title">{{title}}</div>
+    <div class="link-area">
+        {{#links}}
+            <a class="link{{op_border_type}}" href="{{href}}"
+            style=" background-color:{{op_bg_color}}; color:{{op_text_color}};" 
+            target="_blank"
+            >{{title}}</a>
+        {{/links}}
+    </div>
+    <div class='banner'>
+    Feito com raiva por Leila Freitas ♥
+    </div>
+    {{#fb_pixel}}
+            <!-- Facebook Pixel Code -->
+            <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '{{fb_pixel}}');
+            fbq('track', 'PageView');
+            </script>
+            <noscript>
+            <img height="1" width="1" style="display:none" 
+                src="https://www.facebook.com/tr?id={{fb_pixel}}&ev=PageView&noscript=1"/>
+            </noscript>
+            <!-- End Facebook Pixel Code -->
+    {{/fb_pixel}}  
+</body>
+</html>
