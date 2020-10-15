@@ -2,6 +2,7 @@ const Page= require('../models/Page');
 const Link=require('../models/Link');
 const View=require('../models/View');
 const Click=require('../models/View');
+//Preciso Implementar Função pra Click
 module.exports={
     async index(req,res){
         let posts= await Page.findAll({where:{
