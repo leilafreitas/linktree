@@ -17,6 +17,7 @@ module.exports={
                 total:0,
             }
         });
+        req.body.idPage= posts[0].dataValues.id;
         View.update(
             {
                 total:  view[0].dataValues.total + 1

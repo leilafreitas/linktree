@@ -1,5 +1,5 @@
 module.exports={
     index(req,res){
-        return res.json('Olá Brasoç');
+        return res.render('cad_user');
     }
 }

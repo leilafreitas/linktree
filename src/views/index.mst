@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>Index</title>
+    <style type="text/css">
+    *{
+        box-sizing: border-box;
+
+    }
+    body{
+        margin:0;
+        display:flex;
+        background-color:#eee;
+        min-height:100vh
+    }
+    nav{
+        position:fixed;
+        left:0;
+        top:0;
+        bottom:0;
+        width:60px;
+        background-color:#fff;
+        border-right:1px solid #ccc;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:center;
+        padding:10px 0;
+
+
+    }
+    .conteiner{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        min-height:100vh;
+        margin-left:60px;
+        
+    }
+    h1{
+        margin:0 0 20px 0;
+
+    }
+    input{
+        display:block;
+        width:100%;
+        outline:0;
+        border: 1px solid #ccc;
+        padding:15px 10px;
+        margin-bottom:10px;
+        border-radius:5px;
+    }
+    input[type=submit]{
+        background-color: #3f7125;
+        color:#fff;
+        border:0;
+        cursor:pointer;
+
+    }
+    a{
+        color:#000;
+        text-decoration:none
+    }
+    a:hover{
+        text-decoration:underline;
+    }
+    .error{
+        background-color:#d66363;
+        color:#fff;
+        padding:15px;
+        border-radius:5px;
+        margin-bottom:10px;
+
+    }
+    </style>
+</head>
+<body>
+    <nav>
+    <div class="nav--top">
+        <a href="/admin">
+            <img src="/assets/images/pages.png" width='28'/>
+
+        </a>
+    </div>
+    <div class="nav--bottom">
+        <a href="/admin">
+            <img src="/assets/images/logout.png" width='28'/>
+
+        </a>
+    </div>
+    </nav>
+    <section class="conteiner">
+
+    </section>
+
+
+
+        
+</body>
+</html>

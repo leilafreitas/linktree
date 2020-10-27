@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>Cadastro</title>
+    <style type="text/css">
+    *{
+        box-sizing: border-box;
+
+    }
+    body{
+        margin:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:#eee;
+        min-height:100vh
+    }
+    .loginArea{
+        width:100%;
+        max-width:400px;
+        padding:30px;
+        background-color:#FFF;
+        border: 1px solid #ccc;
+    }
+    h1{
+        margin:0 0 20px 0;
+
+    }
+    input{
+        display:block;
+        width:100%;
+        outline:0;
+        border: 1px solid #ccc;
+        padding:15px 10px;
+        margin-bottom:10px;
+        border-radius:5px;
+    }
+    input[type=submit]{
+        background-color: #3f7125;
+        color:#fff;
+        border:0;
+        cursor:pointer;
+
+    }
+    a{
+        color:#000;
+        text-decoration:none
+    }
+    a:hover{
+        text-decoration:underline;
+    }
+    .error{
+        background-color:#d66363;
+        color:#fff;
+        padding:15px;
+        border-radius:5px;
+        margin-bottom:10px;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="loginArea">
+        {{#flashes}}
+            {{#error}}
+                <div class="error">{{.}}</div>
+            {{/error}}
+        {{/flashes}}
+        <h1>Cadastro</h1>
+
+        <form method="POST">
+            <input type="text" name="name" placeholder="Digite seu nome"/>
+            <input type="email" name='email' placeholder="Digite seu email"/>
+
+            <input type="password" name='password' placeholder="Digite sua senha"/>
+            <input type='submit' value='Cadastrar'/>
+
+        </form>
+    </div>
+</body>
+</html>

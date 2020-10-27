@@ -61,7 +61,7 @@
     <div class="profile-title">{{title}}</div>
     <div class="link-area">
         {{#links}}
-            <a class="link{{op_border_type}}" href="{{href}}"
+            <a class="link{{op_border_type}}" href="{{href}}" 
             style=" background-color:{{op_bg_color}}; color:{{op_text_color}};" 
             target="_blank"
             >{{title}}</a>
